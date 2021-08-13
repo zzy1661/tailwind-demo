@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,8 +24,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  @apply focus-within:sr-only;
-  display: flex;
-  @layer base;
+  @apply flex flex-col;
+  img {
+    @apply w-400;
+  }
 }
 </style>

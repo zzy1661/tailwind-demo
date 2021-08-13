@@ -55,11 +55,11 @@
  * 
  * 
  */
- const spacings = [0, 8, 10, 12, 16, 20, 32, 40, 56, 64, 96, 128, 240, 480];
- const fontSizes= [0, 24, 28, 32, 36, 40, 48, 56, 64];
- const widths = [44, 240, 400, 480];
- const heights = [200, 300];
- const boxes= [80, 100, 120, 200];
+const spacings = [0, 8, 10, 12, 16, 20, 32, 40, 56, 64, 96, 128, 240, 480];
+const fontSizes = [0, 24, 28, 32, 36, 40, 48, 56, 64];
+const widths = [44, 240, 400, 480];
+const heights = [200, 300];
+const boxes = [80, 100, 120, 200];
 module.exports = {
   // production下的tree shake
   purge: ["./src/**/*.html", "./src/**/*.js"],
@@ -70,16 +70,41 @@ module.exports = {
   theme: {
     // extend: {},
     colors: {
-      primary: "#0000ff",
+      // 基本填充颜色列表 //浅黄#
+      "primary": "#5965ba",
+      "secondary": "#999",
+      "success": "#1bb73a",
+      "danger": "#e83930",
+      "warning": "#fa8c16",
+      "info": "#FFE56C",
+      "dark": "#333",
+      // 选中或者focus、hover等,暂缺
+      "primary-active": "#5965ba",
+      "secondary-active": "#999",
+      "success-active": "#1bb73a",
+      "danger-active": "#e83930",
+      "warning-active": "#fa8c16",
+      "info-active": "#FFE56C",
+      "dark-active": "#333",
+      // 不可操作,需要透明度,暂缺
+      "primary-disable": "#5965ba",
+      "secondary-disable": "#999",
+      "success-disable": "#1bb73a",
+      "danger-disable": "#e83930",
+      "warning-disable": "#fa8c16",
+      "info-disable": "#FFE56C",
+      "dark-disable": "#333",
     },
     spacing: {
-      px:'1px',
-      ...spacings.reduce((pre,cur)=>{pre[cur]=cur+'px';return pre},{})
+      px: '1px',
+      ...spacings.reduce((pre, cur) => { pre[cur] = cur + 'px'; return pre }, {})
     },
-    
-    width:{
-      ...widths.reduce((pre,cur)=>{pre[cur]=cur+'px';return pre},{})
+    width: {
+      ...widths.reduce((pre, cur) => { pre[cur] = cur + 'px'; return pre }, {})
     },
+    heights: {
+      ...heights.reduce((pre, cur) => { pre[cur] = cur + 'px'; return pre }, {})
+    }
   },
   variants: {
     extend: {},
