@@ -147,7 +147,7 @@ module.exports = {
       sm: ['24px', '24px'],//最小12，12一下不能保证
       base: ['28px', '40px'],
       lg: ['32px', '48px'], // 以上三种为项目中主要字号，不以数字命名，其他特殊字号以数字命名
-      ...fontSizes.reduce((pre, cur) => { pre[cur] = cur + 'px'; return pre }, {})
+      ...fontSizes.reduce((pre, cur) => { pre[cur] = [cur + 'px', 1]; return pre }, {})
     }
   },
   variants: {
